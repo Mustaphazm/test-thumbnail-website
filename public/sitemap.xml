@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <!-- Main Homepage URL -->
   <url>
-    <loc>https://prefrank.com/sitemap.xml</loc> <!-- <<< CHANGE to your actual domain -->
-    <lastmod>2025-04-28</lastmod> <!-- <<< CHANGE to the date you last made significant content changes -->
-    <changefreq>monthly</changefreq> <!-- How often the content is likely to change (daily, weekly, monthly, yearly, always, never) -->
-    <priority>1.0</priority> <!-- Priority relative to other URLs on your site (1.0 is highest) -->
+    <loc>https://prefrank.com/</loc>            
+    <lastmod>2024-04-28</lastmod>              
+    <changefreq>monthly</changefreq>            
+    <priority>1.0</priority>                    
   </url>
 
-  <url>
-    <loc>https://prefrank.com/about</loc>
-    <lastmod>2025-04-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  -->
+ 
+
 </urlset>
