@@ -9,4 +9,4 @@ Allow: /
 
 # Point crawlers to your sitemap
 Sitemap: https://prefrank.com/sitemap.xml  # 
-Disallow : https://prefrank.com/about  #
+Disallow : /aboutus/  #
