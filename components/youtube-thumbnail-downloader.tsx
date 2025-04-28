@@ -678,68 +678,175 @@ const translatePage = (lang: string) => {
       </footer>
 
       {/* Modals - Structure remains same, content translated via data-translate */}
+           {/* === Updated About Us Modal === */}
       {currentModal === "aboutModal" && (
         <div id="aboutModal" className="modal" style={{ display: "flex" }}>
           <div className="modal-content">
             <span className="modal-close" onClick={closeModal}>×</span>
             <h2 data-translate="aboutTitle">About This Tool</h2>
-            <p data-translate="aboutP1">Welcome! This is your simple and efficient tool...</p>
-            <p data-translate="aboutP2">We created this tool to provide a quick and easy way...</p>
-            <p data-translate="aboutP3">Simply paste the YouTube video URL into the input box...</p>
-            <p data-translate="aboutP4">Our goal is to keep this tool fast, reliable...</p>
-            <p><strong data-translate="aboutP5Strong">Please Note:</strong> <span data-translate="aboutP5Text">Thumbnails are the property...</span></p>
+            <p data-translate="aboutP1">
+              Welcome to the YouTube Thumbnail Downloader! Your fast, free, and reliable online tool for grabbing high-quality video thumbnails directly from YouTube.
+            </p>
+            <p data-translate="aboutP2">
+              We created this service because we know how important great thumbnails are. Whether you're a content creator looking for inspiration, a social media manager needing visuals, a designer seeking assets, or just someone wanting to save a cool thumbnail, finding an easy way to download them in different resolutions can be a challenge. This tool solves that problem.
+            </p>
+            <p data-translate="aboutP3">
+              Using our YouTube thumbnail grabber is incredibly simple: just paste the URL of any public YouTube video (including Shorts!) into the input box, click "Get Thumbnails", and instantly see all available sizes – Max HD (1280x720, when available), SD (640x480), HQ (480x360), and MQ (320x180).
+            </p>
+             <p data-translate="aboutP4">
+              Choose the resolution you need, then either click "Download" to save the image directly or "Copy URL" to get a link for embedding or sharing. No software installation, no sign-up required – just a straightforward way to get the YouTube thumbnails you need.
+            </p>
+            <p data-translate="aboutP6"> {/* New Key */}
+              Our goal is to provide the best user experience for downloading YouTube thumbnails: fast, easy-to-use, accessible on any device (desktop or mobile), and completely free.
+            </p>
+            <p>
+              <strong data-translate="aboutP5Strong">Please Note:</strong>{' '}
+              <span data-translate="aboutP5Text">
+                Thumbnails are the intellectual property of their respective owners (YouTube and/or the video creator). Please use this tool responsibly, respecting copyright laws and YouTube's Terms of Service. This tool is for accessing publicly available content conveniently.
+              </span>
+            </p>
           </div>
         </div>
       )}
 
+      {/* === Updated Privacy Policy Modal === */}
       {currentModal === "privacyModal" && (
         <div id="privacyModal" className="modal" style={{ display: "flex" }}>
             <div className="modal-content">
                 <span className="modal-close" onClick={closeModal}>×</span>
                 <h2 data-translate="privacyTitle">Privacy Policy</h2>
-                <p data-translate="privacyP1">Your privacy is important to us...</p>
+                <p data-translate="privacyP1">Your privacy is critically important to us. This Privacy Policy outlines how the YouTube Thumbnail Downloader tool handles information.</p>
+
                 <p><strong data-translate="privacyHInfo">Information We Handle:</strong></p>
                 <ul>
-                <li><strong data-translate="privacyInfo1Strong">YouTube URLs:</strong> <span data-translate="privacyInfo1Text">We process the YouTube URLs...</span></li>
-                <li><strong data-translate="privacyInfo2Strong">Usage Data:</strong> <span data-translate="privacyInfo2Text">We do not collect personal identifying information...</span></li>
-                <li><strong data-translate="privacyInfo3Strong">Cookies/Local Storage:</strong> <span data-translate="privacyInfo3Text">We use `localStorage` only...</span></li>
+                  <li>
+                    <strong data-translate="privacyInfo1Strong">YouTube URLs:</strong>{' '}
+                    <span data-translate="privacyInfo1Text">
+                      When you enter a YouTube video URL, we process it solely to construct the image URLs for the publicly available thumbnails hosted on YouTube's servers (img.youtube.com). We **do not store, log, or track** the YouTube URLs you submit after your request is completed.
+                    </span>
+                  </li>
+                  <li>
+                    <strong data-translate="privacyInfo2Strong">Usage Data:</strong>{' '}
+                    <span data-translate="privacyInfo2Text">
+                     We do not collect any personally identifiable information (PII). We may gather basic, anonymous, aggregated usage statistics (like the number of times the tool is used or which features are popular) strictly to understand how the service is used and how to improve it. This data is not linked to individual users.
+                    </span>
+                  </li>
+                  <li>
+                    <strong data-translate="privacyInfo3Strong">Cookies/Local Storage:</strong>{' '}
+                    <span data-translate="privacyInfo3Text">
+                      We use your browser's `localStorage` exclusively to remember your user interface preferences, specifically your chosen language (`selectedLanguage`) and light/dark mode setting (`darkMode`). This is for your convenience only. We **do not use tracking cookies** or any other cookies for advertising or cross-site tracking.
+                    </span>
+                  </li>
                 </ul>
+
                 <p><strong data-translate="privacyHUse">How We Use Information:</strong></p>
                 <ul>
-                <li data-translate="privacyUse1">To provide the core functionality...</li>
-                <li data-translate="privacyUse2">To improve the user experience...</li>
+                  <li data-translate="privacyUse1">To provide the core service: enabling you to find and access YouTube thumbnail images based on the URL you provide.</li>
+                  <li data-translate="privacyUse2">To enhance your user experience by remembering your display preferences (language and theme).</li>
+                  <li data-translate="privacyUse3"> {/* New Key */}
+                    To analyze anonymous usage patterns to maintain and improve the tool's functionality and performance.
+                  </li>
                 </ul>
-                <p><strong data-translate="privacyHShare">Information Sharing:</strong> <span data-translate="privacyShareText">We do not sell or share...</span></p>
-                <p><strong data-translate="privacyHSecurity">Security:</strong> <span data-translate="privacySecurityText">Thumbnail images are fetched directly...</span></p>
-                <p><strong data-translate="privacyHChanges">Changes to this Policy:</strong> <span data-translate="privacyChangesText">We may update this Privacy Policy...</span></p>
+
+                <p><strong data-translate="privacyHShare">Information Sharing:</strong>{' '}
+                  <span data-translate="privacyShareText">
+                    We **do not sell, rent, or share** any user-provided information (like submitted URLs) or identifiable usage data with any third parties.
+                  </span>
+                </p>
+
+                <p><strong data-translate="privacyHSecurity">Security:</strong>{' '}
+                  <span data-translate="privacySecurityText">
+                    This tool interacts directly with YouTube's publicly accessible image servers via HTTPS (secure connections) to fetch thumbnails. While we strive to maintain a secure service, please remember that no internet transmission is 100% secure.
+                  </span>
+                </p>
+
+                <p><strong data-translate="privacyHLinks">Third-Party Links:</strong> {/* New Key */}
+                  <span data-translate="privacyLinksText"> {/* New Key */}
+                   This website itself does not contain third-party links, but the thumbnails retrieved are hosted by YouTube. We are not responsible for the privacy practices of YouTube or any external sites.
+                  </span>
+                </p>
+
+                 <p><strong data-translate="privacyHChildren">Children's Privacy:</strong> {/* New Key */}
+                  <span data-translate="privacyChildrenText"> {/* New Key */}
+                   This service is not directed towards individuals under the age of 13. We do not knowingly collect any information from children under 13.
+                  </span>
+                </p>
+
+                <p><strong data-translate="privacyHChanges">Changes to this Policy:</strong>{' '}
+                  <span data-translate="privacyChangesText">
+                    We may update this Privacy Policy from time to time. Any changes will be posted on this page. We encourage you to review this policy periodically. Your continued use of the service after changes constitutes acceptance of the new policy.
+                  </span>
+                </p>
             </div>
         </div>
       )}
 
+      {/* === Updated Terms of Service Modal === */}
       {currentModal === "termsModal" && (
         <div id="termsModal" className="modal" style={{ display: "flex" }}>
             <div className="modal-content">
                 <span className="modal-close" onClick={closeModal}>×</span>
                 <h2 data-translate="termsTitle">Terms of Service</h2>
-                <p data-translate="termsP1">Welcome! By using our website and services...</p>
+                <p data-translate="termsP1">
+                  Welcome to the YouTube Thumbnail Downloader. By accessing or using this website and its services ("Service"), you agree to comply with and be bound by the following terms and conditions ("Terms"). Please read them carefully.
+                </p>
+
                 <p><strong data-translate="termsH1">1. Use of Service:</strong></p>
                 <ul>
-                <li data-translate="terms1a">This tool provides a way to access...</li>
-                <li data-translate="terms1b">This service is intended for personal...</li>
-                <li data-translate="terms1c">You agree not to use this service for any unlawful purpose...</li>
+                  <li data-translate="terms1a">
+                    The Service provides a technical means to access and view publicly available thumbnail images associated with YouTube videos using the video's URL.
+                  </li>
+                  <li data-translate="terms1b">
+                    This Service is intended primarily for personal, informational, and non-commercial use. Examples include previewing, referencing, educational purposes, or creating backups for content where you hold the necessary rights or within the bounds of fair use.
+                  </li>
+                   <li data-translate="terms1c">
+                    You agree **not** to use this Service for any unlawful purpose, including but not limited to: copyright infringement, harassment, distributing malicious content, or any activity that violates YouTube's own Terms of Service.
+                  </li>
+                   <li data-translate="terms1d"> {/* New Key */}
+                     You agree not to automate access to the Service in a way that could impair its functionality (e.g., excessive scraping) or violate these Terms or YouTube's Terms.
+                   </li>
                 </ul>
-                <p><strong data-translate="termsH2">2. Intellectual Property:</strong></p>
+
+                <p><strong data-translate="termsH2">2. Intellectual Property & Copyright:</strong></p>
                 <ul>
-                <li data-translate="terms2a">The thumbnail images retrieved belong to YouTube...</li>
-                <li data-translate="terms2b">This tool does not grant you any rights...</li>
+                  <li data-translate="terms2a">
+                    All thumbnail images retrieved using this Service are the intellectual property of YouTube and/or the respective video content creators.
+                  </li>
+                  <li data-translate="terms2b">
+                    This Service **does not grant you any license or rights** to use these thumbnail images beyond viewing them through the tool. You are solely responsible for ensuring you have the necessary permissions, licenses, or justification (such as fair use) for any further use, reproduction, distribution, or modification of the downloaded thumbnails.
+                   </li>
+                   <li data-translate="terms2c"> {/* New Key */}
+                     Using downloaded thumbnails in your own videos, websites, or commercial projects without proper authorization from the copyright holder may constitute copyright infringement. This tool is provided for technical convenience; legal compliance for image use is your responsibility.
+                   </li>
                 </ul>
+
                 <p><strong data-translate="termsH3">3. Disclaimer of Warranties:</strong></p>
                 <ul>
-                <li data-translate="terms3a">This tool is provided "as is"...</li>
-                <li data-translate="terms3b">We are not affiliated with YouTube...</li>
+                  <li data-translate="terms3a">
+                    The Service is provided "as is" and "as available" without any warranties of any kind, express or implied. We do not guarantee the uninterrupted availability, accuracy, or reliability of the Service. We do not guarantee that thumbnails, especially specific resolutions like Max HD, will be available for every YouTube video, as this depends on YouTube's generation process.
+                  </li>
+                  <li data-translate="terms3b">
+                    We are **not affiliated with, endorsed by, or sponsored by** YouTube or Google LLC.
+                  </li>
                 </ul>
-                <p><strong data-translate="termsH4">4. Limitation of Liability:</strong> <span data-translate="terms4Text">This tool shall not be liable...</span></p>
-                <p><strong data-translate="termsH5">5. Changes to Terms:</strong> <span data-translate="terms5Text">We reserve the right to modify...</span></p>
+
+                <p><strong data-translate="termsH4">4. Limitation of Liability:</strong>{' '}
+                  <span data-translate="terms4Text">
+                    To the fullest extent permitted by law, the operators of this Service shall not be liable for any direct, indirect, incidental, special, consequential, or exemplary damages, including but not limited to damages for loss of profits, goodwill, use, data, or other intangible losses, resulting from the use or inability to use the Service, or the use of any thumbnails obtained through the Service.
+                  </span>
+                </p>
+
+                 <p><strong data-translate="termsH6">5. User Conduct:</strong> {/* New Key */}
+                  <span data-translate="terms6Text"> {/* New Key */}
+                    You agree to use the Service responsibly and ethically. You will not interfere with or disrupt the Service or servers/networks connected to the Service.
+                  </span>
+                </p>
+
+                <p><strong data-translate="termsH5">6. Changes to Terms:</strong>{' '} {/* Renumbered */}
+                  <span data-translate="terms5Text">
+                    We reserve the right to modify or replace these Terms at any time at our sole discretion. We will indicate changes by updating the date or potentially providing notice. Your continued use of the Service after any changes constitutes acceptance of the new Terms.
+                  </span>
+                </p>
             </div>
         </div>
       )}
