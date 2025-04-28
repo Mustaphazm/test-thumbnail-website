@@ -9,4 +9,4 @@ Allow: /
 
 # Point crawlers to your sitemap
 Sitemap: https://prefrank.com/sitemap.xml  # 
-aboutModal : https://prefrank.com/aboutus
+aboutModal : https://prefrank.com/aboutmodal
