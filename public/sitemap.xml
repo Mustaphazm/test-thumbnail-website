@@ -8,8 +8,6 @@
     <priority>1.0</priority> <!-- Priority relative to other URLs on your site (1.0 is highest) -->
   </url>
 
-  <!-- Add other important static pages if you have them -->
-  <!-- Example:
   <url>
     <loc>https://yourdomain.com/about</loc>
     <lastmod>2023-10-26</lastmod>
