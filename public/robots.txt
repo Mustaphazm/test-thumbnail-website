@@ -1,0 +1,11 @@
+# robots.txt
+# Allows all compliant web crawlers access to all content
+User-agent: *
+Allow: /
+
+# Disallow specific paths if needed in the future
+# Example: Disallow: /admin/
+# Example: Disallow: /private-stuff/
+
+# Point crawlers to your sitemap
+Sitemap: https://prefrank.com/sitemap.xml  # 
