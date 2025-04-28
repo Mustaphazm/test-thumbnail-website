@@ -3,15 +3,15 @@
   <!-- Main Homepage URL -->
   <url>
     <loc>https://prefrank.com/sitemap.xml</loc> <!-- <<< CHANGE to your actual domain -->
-    <lastmod>2025-04-27</lastmod> <!-- <<< CHANGE to the date you last made significant content changes -->
+    <lastmod>2025-04-28</lastmod> <!-- <<< CHANGE to the date you last made significant content changes -->
     <changefreq>monthly</changefreq> <!-- How often the content is likely to change (daily, weekly, monthly, yearly, always, never) -->
     <priority>1.0</priority> <!-- Priority relative to other URLs on your site (1.0 is highest) -->
   </url>
 
   <url>
-    <loc>https://yourdomain.com/about</loc>
-    <lastmod>2023-10-26</lastmod>
-    <changefreq>yearly</changefreq>
+    <loc>https://prefrank.com/about</loc>
+    <lastmod>2025-04-28</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   -->
